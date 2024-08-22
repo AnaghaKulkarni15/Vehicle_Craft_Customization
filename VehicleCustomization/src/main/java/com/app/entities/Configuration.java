@@ -36,7 +36,7 @@ import lombok.ToString;
 public class Configuration extends BaseEntity {
 	@Column
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
 	@ManyToOne(cascade = CascadeType.MERGE)

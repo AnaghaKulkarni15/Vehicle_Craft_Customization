@@ -37,12 +37,15 @@ public class Category extends BaseEntity {
 
 	@Column
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
 	@Setter
 	@Column(name = "vehicle_type")
 	private String name;
+	
+	@Column(name="price")
+	private double price;
 
 //	@OneToMany(mappedBy = "chosenCategory", cascade = CascadeType.MERGE, fetch = FetchType.EAGER)
 //	private List<Configuration> configurations = new ArrayList<>();
